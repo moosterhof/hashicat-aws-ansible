@@ -171,8 +171,7 @@ resource "null_resource" "configure-cat-app" {
     inline = [
       "sudo apt -q -y update",
       "sudo apt -q -y install ansible",
-      "find /home/${var.admin_username}/",
-      "sudo ansible-playbook -c local -i \"localhost,\" /home/${var.admin_username}/playbook.yml",
+      "sudo ansible-playbook -c local -i \"localhost,\" /home/ubuntu/playbook.yml",
     ]
 
     connection {
