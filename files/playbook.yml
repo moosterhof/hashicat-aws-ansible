@@ -14,7 +14,7 @@
 
     - name: Configure Cat App
       template:
-        src: files/index.j2
+        src: index.j2
         dest: /var/www/html/index.html
 
     - name: Start the apache2 service
