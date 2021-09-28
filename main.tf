@@ -170,7 +170,7 @@ resource "null_resource" "configure-cat-app" {
   provisioner "remote-exec" {
     inline = [
       "sudo apt -q -y update",
-      "sudo apt -q -y install ansible",
+      "sudo apt install -qq ansible",
       "sudo ansible-playbook -c local -i \"localhost,\" /home/ubuntu/playbook.yml",
     ]
 
