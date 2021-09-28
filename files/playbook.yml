@@ -17,7 +17,13 @@
         src: files/index.j2
         dest: /var/www/html/index.html
 
-    - name: Start the httpd service
+    - name: Start the apache2 service
       service:
         name: apache2
         state: started
+
+  handlers:
+    - name: Restart apache2
+      service:
+        name: httpd
+        state: restarted
